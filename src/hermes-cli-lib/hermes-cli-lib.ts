@@ -1,7 +1,7 @@
 import * as child from 'child_process';
 import kill from 'tree-kill';
-import type { ShellProcessType } from '../common/interfaces';
-import { hermesLibConfig } from '../common/hermes-cli-lib-config';
+import type { ShellProcessType } from '../support/interfaces';
+import { hermesLibConfig } from '../support/hermes-cli-lib-config';
 
 /**
  * Class to handle cli methods
