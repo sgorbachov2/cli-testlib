@@ -120,7 +120,7 @@ export class HermesCLILib {
       waitedFor += timeout;
       if (waitedFor > hermesLibConfig.waitingTimeoutGlobal) {
         // Kill the process
-        kill(shell.process.pid);
+        kill(shell.process.pid!);
         throw new Error(
           `checkIfFinished\nFailed to finish after ${hermesLibConfig.waitingTimeoutAction} ms.\nCommand: ${shell.command}\nCurrent output: \n${shell.output}`,
         );
