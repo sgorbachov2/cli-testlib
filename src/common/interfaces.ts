@@ -1,3 +1,6 @@
+import * as child from 'child_process';
+
+
 export interface ShellProcessType {
   /**
    * Child process object

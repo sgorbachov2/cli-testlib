@@ -1,9 +1,7 @@
+import * as child from 'child_process';
 import kill from 'tree-kill';
 import type { ShellProcessType } from '../common/interfaces';
 import { hermesLibConfig } from '../common/hermes-cli-lib-config';
-
-// tslint:disable-next-line
-const spawn = require('child_process').spawn;
 
 /**
  * Class to handle cli methods
@@ -56,7 +54,7 @@ export class HermesCLILib {
       process.env.SLACK_TEST_TRACE = 'true';
 
       // Start child process
-      const childProcess = spawn(`${command}`, {
+      const childProcess = child.spawn(`${command}`, {
         shell: true,
       });
 
